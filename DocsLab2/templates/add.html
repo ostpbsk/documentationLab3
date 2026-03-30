@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+    <h1>Add Event</h1>
+
+    <form method="post">
+        <label>Title</label>
+        <input name="title" required>
+
+        <label>Genre</label>
+        <input name="genre" required>
+
+        <button type="submit">Save</button>
+    </form>
+
+    <a href="/">⬅ Back</a>
+</div>

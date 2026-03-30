@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+    <h1>Events</h1>
+
+    <a href="/add">➕ Add Event</a>
+
+    <div>
+        {% for e in events %}
+            <div class="event">
+                <strong>{{ e.title }}</strong> ({{ e.genre }})
+
+                <span class="actions">
+                    <a href="/edit/{{ e.id }}">✏️ Edit</a>
+                    <a href="/delete/{{ e.id }}">🗑 Delete</a>
+                </span>
+            </div>
+        {% endfor %}
+    </div>
+</div>
